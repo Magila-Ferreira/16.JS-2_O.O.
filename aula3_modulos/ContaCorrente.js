@@ -1,12 +1,16 @@
 import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente{
+    
+    // VARIÁVEL QUE CONTABILIZA O NÚMERO DE CONTAS CRIADAS
+    static numeroDeContas = 0;
     agencia;
     
-     // #saldo =0 https://github.com/tc39/proposal-class-fields#private-fields
+    // #saldo =0 https://github.com/tc39/proposal-class-fields#private-fields
     _saldo = 0;
     _cliente;
 
+    // MÉTODOS_CONTA CORRENTE
     sacar(valor) {
         if(this._saldo >= valor){
             this._saldo -= valor;
@@ -27,6 +31,8 @@ export class ContaCorrente{
         conta.depositar(valor);
     }
 
+
+    // ACESSORES:    
     //  PROTEÇÃO DE DADOS - ACESSOR PERMITE MANIPULAR O ATRIBUTO_PRIVADO_SALDO DENTRO DA CLASSE_CONTA CORRENTE
     get saldo() {
         return this._saldo;
@@ -43,4 +49,14 @@ export class ContaCorrente{
     get cliente() {
         return this._cliente
     }
+
+    // CONSTRUTOR
+    // PROTEÇÃO DE DADOS - O CONSTRUTOR SÓ PERMITE ATRIBUIR VALOR AOS ATRIBUTOS_AGENCIA_SALDO NO MOMENTO DE CRIAÇÃO DA CLASSE_CONTA CORRENTE
+    constructor(agencia, cliente) {
+        this.agencia = agencia;
+        this.cliente = cliente;
+        
+        // VARIÁVEL QUE ADICIONA +1 AO NÚMERO_DE_CONTAS QUANDO UMA NOVA CONTA É CRIADA
+        ContaCorrente.numeroDeContas++; 
+    } 
 }
