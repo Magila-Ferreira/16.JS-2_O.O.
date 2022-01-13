@@ -1,0 +1,20 @@
+{
+  "name": "16.js-2_oo",
+  "version": "1.0.0",
+  "description": "Projeto ByteBank para seus clientes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Magila-Ferreira/16.JS-2_OO.git"
+  },
+  "author": "MMSF",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Magila-Ferreira/16.JS-2_OO/issues"
+  },
+  "homepage": "https://github.com/Magila-Ferreira/16.JS-2_OO#readme"
+}
