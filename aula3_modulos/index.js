@@ -37,7 +37,7 @@ contaCorrenteAlice.depositar(valorSacado);
 
 // TRANSFERÊNCIAS ENTRE CONTAS
 let valorTransf1 = 100;
-let valorTransf2 = 250;
+let valorTransf2 = 200;
 let valorTransf3 = 50;
 let valorTransf4 = 80;
 contaCorrenteRicardo.transferir(valorTransf1, contaCorrenteAlice);
@@ -52,3 +52,13 @@ console.log(contaCorrenteRicardo);
 // SALDO_ALICE
 console.log("\n");
 console.log(contaCorrenteAlice);
+
+// GET - IMPRIMINDO SÓ A CLASSE_CLIENTE DA CONTA:
+console.log("\n");
+console.log(contaCorrenteRicardo.cliente);
+console.log(contaCorrenteAlice.cliente);
+
+// GET - IMPRIMINDO SÓ O ATRIBUTO_PROVADO DA CLASSE_CONTA CORRENTE:
+console.log("\n");
+console.log("Saldo_RICARDO: " +contaCorrenteRicardo.saldo.toFixed(2));
+console.log("Saldo_ALICE: " +contaCorrenteAlice.saldo.toFixed(2));
